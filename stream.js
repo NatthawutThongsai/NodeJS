@@ -19,3 +19,5 @@ writerStream.end();
 writerStream.on('finish',function(){
     console.log("Output complete");
 });
+var writer=fs.createWriteStream('file1.txt');
+readStream.pipe(writer);
