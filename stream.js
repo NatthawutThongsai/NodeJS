@@ -12,3 +12,10 @@ readStream.on('end',function(){
 readStream.on('error',function(err){
     console.log(err.stack);
 });
+var data2 = "WriterStream"
+var writerStream = fs.createWriteStream('output.txt');
+writerStream.write(data2,'utf-8');
+writerStream.end();
+writerStream.on('finish',function(){
+    console.log("Output complete");
+});
